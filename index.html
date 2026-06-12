@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikah Invitation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2 class="bismillah">🌙 بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْم 🌙</h2>
+
+        <p class="dua">✨ السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ ✨</p>
+
+        <p class="bless">
+        🤍 بَارَكَ اللّٰهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ 🤍
+        </p>
+
+        <img src="couple.png" class="couple-img">
+
+        <h1 class="names">Mohamed Anas ❤️ Moshina Yasmin</h1>
+
+        <p class="story">Two beautiful souls united by Allah 💍</p>
+
+        <div class="countdown">
+            <h3>Countdown to Nikah</h3>
+            <div id="timer"></div>
+        </div>
+
+        <div class="details">
+            📅 06 September 2026 (Sunday)<br>
+            🕌 12:15 PM<br>
+            📍 Jamia Zainul Uloom, Thanjavur
+        </div>
+
+        <p class="wish">
+        Your presence, blessings & duas mean a lot to us 🤲
+        </p>
+
+        <button onclick="downloadPDF()">📄 Download Invitation PDF</button>
+
+        <p class="footer">✨ JazakAllahu Khair ✨</p>
+
+    </div>
+
+</div>
+
+audio autoplay loop>
+
+  <source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- Countdown -->
+
+<div id="countdown"></div>
+
+<!-- RSVP Form -->
+
+<form>
+
+  <input type="text" placeholder="Your Name">
+
+  <button type="submit">Send RSVP</button>
+
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:black;
+    color:gold;
+    text-align:center;
+}
+
+.container{
+    padding:20px;
+}
+
+.card{
+    max-width:600px;
+    margin:auto;
+    padding:20px;
+    border:2px solid gold;
+    border-radius:15px;
+    background:#0d0d0d;
+}
+
+.bismillah{
+    font-size:18px;
+}
+
+.dua, .bless{
+    font-size:14px;
+}
+
+.couple-img{
+    width:100%;
+    border-radius:15px;
+    margin:15px 0;
+    border:2px solid gold;
+}
+
+.names{
+    font-size:22px;
+}
+
+.story{
+    font-style:italic;
+}
+
+.countdown{
+    margin:15px 0;
+    padding:10px;
+    border:1px solid gold;
+}
+
+#timer{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.details{
+    margin:15px 0;
+    line-height:1.8;
+}
+
+button{
+    background:gold;
+    color:black;
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#ffd700;
+}
+
+.footer{
+    margin-top:15px;
+}
+
+// Countdown Timer
+var weddingDate = new Date("Sep 06, 2026 12:15:00").getTime();
+
+var x = setInterval(function() {
+
+    var now = new Date().getTime();
+    var distance = weddingDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+}, 1000);
+
+// PDF Download Button
+function downloadPDF(){
+    window.print();
+}
+
+<img src="couple.png">
