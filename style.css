@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: gold;
+  text-align: center;
+}
+
+.card {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 2px solid gold;
+  border-radius: 20px;
+}
+
+#timer {
+  font-size: 24px;
+  margin: 15px;
+  color: white;
+}
+
+button {
+  background: gold;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 10px;
+}
